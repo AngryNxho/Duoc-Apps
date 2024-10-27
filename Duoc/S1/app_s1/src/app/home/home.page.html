@@ -1,20 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="main-container">
+  <ion-list class="contenedor input-container">
+    <h2 class="welcome-title">Bienvenido!</h2>
+    <p>Usuario: {{ usuario }}</p>
+    
+    <ion-item class="input-item">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input id="nombre" [(ngModel)]="nombre" placeholder="Ingrese su nombre"></ion-input>
+    </ion-item>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-item class="input-item">
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input id="apellido" [(ngModel)]="apellido" placeholder="Ingrese su apellido"></ion-input>
+    </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+    <ion-item class="input-item">
+      <ion-label>Nivel Educación</ion-label>
+      <ion-select [(ngModel)]="nivelEducacion" placeholder="Seleccione su nivel de educación">
+        <ion-select-option value="Educación Media Completa ">Educación Media Completa  </ion-select-option>
+        <ion-select-option value="Técnico Profesional">Técnico Profesional </ion-select-option>
+        <ion-select-option value="Universitaria">Universitaria </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-label position="floating">Fecha de Nacimiento</ion-label>
+      <ion-input type="date" [(ngModel)]="fechaNacimiento"></ion-input>
+    </ion-item>
+
+    <div class="buttons">
+      <ion-button expand="block" (click)="limpiarCampos()">Limpiar</ion-button>
+      <ion-button expand="block" (click)="mostrarInformacion()">Mostrar</ion-button>
+    </div>
+  </ion-list>
+</div>

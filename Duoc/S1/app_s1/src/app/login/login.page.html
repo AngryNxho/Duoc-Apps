@@ -7,21 +7,16 @@
       
       <ion-card-content>
         <ion-item class="input-item">
-          <ion-label position="floating" color="primary">Email</ion-label>
-          <ion-input type="email"></ion-input>
+          <ion-label position="floating" color="primary">Usuario</ion-label>
+          <ion-input [(ngModel)]="usuario" maxlength="8" pattern="[a-zA-Z0-9]*" placeholder="Ingrese usuario"></ion-input>
         </ion-item>
 
         <ion-item class="input-item">
-          <ion-label position="floating" color="primary">Password</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-label position="floating" color="primary">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="password" maxlength="4" pattern="[0-9]*" placeholder="****"></ion-input>
         </ion-item>
 
-        <ion-button expand="block" class="login-button">Login</ion-button>
-        <ion-button expand="block" fill="clear" color="light" class="register-button">Registrarse</ion-button>
-        
-        <ion-text class="forgot-password" color="medium">
-          <a href="#">Olvidaste tu contraseña</a>
-        </ion-text>
+        <ion-button expand="block" class="login-button" (click)="login()">Ingresar</ion-button>
       </ion-card-content>
     </ion-card>
   </div>
