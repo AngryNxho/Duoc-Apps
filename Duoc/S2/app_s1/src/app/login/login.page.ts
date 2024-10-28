@@ -13,20 +13,17 @@ export class LoginPage {
   constructor(private alertController: AlertController, private navCtrl: NavController) {}
 
   async login() {
-    // Validación del campo usuario (alfanumérico de 3 a 8 caracteres)
     const usuarioRegex = /^[a-zA-Z0-9]{3,8}$/;
     if (!usuarioRegex.test(this.usuario)) {
       this.showAlert('Error', 'El usuario debe ser alfanumérico y tener entre 3 y 8 caracteres.');
       return;
     }
 
-    // Validación del campo contraseña (4 dígitos numéricos)
     if (this.password.length !== 4 || isNaN(Number(this.password))) {
       this.showAlert('Error', 'La contraseña debe ser un número de 4 dígitos.');
       return;
     }
 
-    // Navegación a HomePage con los datos de usuario
     this.navCtrl.navigateForward('/home', {
       queryParams: { usuario: this.usuario }
     });

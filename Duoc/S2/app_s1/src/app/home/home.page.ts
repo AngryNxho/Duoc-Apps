@@ -17,7 +17,6 @@ export class HomePage implements OnInit {
   constructor(private route: ActivatedRoute, private alertController: AlertController) {}
 
   ngOnInit() {
-    // Obtener el nombre de usuario de los parámetros de navegación
     this.route.queryParams.subscribe(params => {
       if (params && params['usuario']) {
         this.usuario = params['usuario'];
