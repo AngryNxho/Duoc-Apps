@@ -1,21 +1,47 @@
 .main-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  background: #14213d;
+  padding: 20px;
+  background-color: #14213d;
+  color: #ffffff;
+}
+
+.welcome-title {
+  color: #fca311;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .contenedor {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #14213d;
+  width: 100%;
+  max-width: 800px;
+  background: #1f2a47;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.peliculas-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.peliculas-container ion-item {
+  background-color: #1f2a47;
+  color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
   box-shadow: 
-        15px 15px 5px #d4890f,
-        10px 10px 5px #e69e0d,
-        5px 5px 5px #fca311;
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.peliculas-container ion-thumbnail img {
+  border-radius: 10px;
 }
 
 .input-container {
@@ -24,22 +50,26 @@
   border-radius: 15px;
   max-width: 400px;
   width: 100%;
+  margin-bottom: 20px;
 }
 
-.input-item {
-  background-color: transparent;
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 10px;
-  border-radius: 10px;
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
-.input-item ion-input {
+.buttons ion-button {
+  flex: 1;
+  color: #14213d;
+  background-color: #fca311;
   --border-radius: 10px;
+  font-weight: bold;
+  --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.input-item ion-item ion-label {
-  margin-right: 10px; 
+.buttons ion-button:hover {
+  background-color: #e69e0d;
 }
 
 @media (max-width: 768px) {
@@ -49,27 +79,21 @@
 }
 
 @media (max-width: 480px) {
-  .input-item {
-    max-width: 100%;
+  .peliculas-container ion-item {
+    flex-direction: column;
   }
 }
 
-.buttons {
+ion-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar-center {
   display: flex;
-  flex-direction: row;
+  justify-content: space-around; 
+  align-items: center;
+  width: 100%;
 }
-
-
-.slide-left {
-  animation: slideLeft 1s forwards;
-}
-
-@keyframes slideLeft {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-

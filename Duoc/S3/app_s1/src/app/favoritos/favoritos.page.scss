@@ -1,0 +1,81 @@
+ion-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .navbar-center {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Contenedor principal */
+.favoritos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #14213d;
+  color: #ffffff;
+}
+
+/* Estilo para el título y los elementos de la lista */
+.favoritos-title {
+  color: #fca311;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.favoritos-list {
+  width: 100%;
+  max-width: 600px;
+  background: #1f2a47;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.favoritos-item {
+  background-color: #1f2a47;
+  color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste de estilo de la navbar en el footer */
+ion-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilo responsivo para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .favoritos-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .favoritos-item {
+    flex-direction: column;
+    padding: 8px;
+  }
+}

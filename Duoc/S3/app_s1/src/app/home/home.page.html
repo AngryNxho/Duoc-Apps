@@ -1,35 +1,51 @@
-<div class="main-container">
-  <ion-list class="contenedor input-container">
-    <h2 class="welcome-title">Bienvenido!</h2>
-    <p>Usuario: {{ usuario }}</p>
-    
-    <ion-item class="input-item">
-      <ion-label position="floating">Nombre</ion-label>
-      <ion-input id="nombre" [(ngModel)]="nombre" placeholder="Ingrese su nombre"></ion-input>
-    </ion-item>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-    <ion-item class="input-item">
-      <ion-label position="floating">Apellido</ion-label>
-      <ion-input id="apellido" [(ngModel)]="apellido" placeholder="Ingrese su apellido"></ion-input>
-    </ion-item>
+<ion-content class="ion-padding main-container">
+  <h2 class="welcome-title">¡Bienvenido, {{ usuario }}!</h2>
 
-    <ion-item class="input-item">
-      <ion-label>Nivel Educación</ion-label>
-      <ion-select [(ngModel)]="nivelEducacion" placeholder="Seleccione su nivel de educación">
-        <ion-select-option value="Educación Media Completa ">Educación Media Completa  </ion-select-option>
-        <ion-select-option value="Técnico Profesional">Técnico Profesional </ion-select-option>
-        <ion-select-option value="Universitaria">Universitaria </ion-select-option>
-      </ion-select>
-    </ion-item>
+  <ion-card class="contenedor">
+    <ion-card-header>
+      <ion-card-title>Agregar Nueva Película</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="peliculas-container">
+      <ion-item class="input-container">
+        <ion-label position="floating">Título de la Película</ion-label>
+        <ion-input [(ngModel)]="nuevaPelicula.titulo" placeholder="Ingrese el título"></ion-input>
+      </ion-item>
+      <ion-item class="input-container">
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-textarea [(ngModel)]="nuevaPelicula.descripcion" placeholder="Ingrese una breve descripción"></ion-textarea>
+      </ion-item>
+      <div class="buttons">
+        <ion-button expand="block" (click)="agregarAFavoritos()">Agregar a Favoritos</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
 
-    <ion-item class="input-item">
-      <ion-label position="floating">Fecha de Nacimiento</ion-label>
-      <ion-input type="date" [(ngModel)]="fechaNacimiento"></ion-input>
-    </ion-item>
-
-    <div class="buttons">
-      <ion-button expand="block" (click)="limpiarCampos()">Limpiar</ion-button>
-      <ion-button expand="block" (click)="mostrarInformacion()">Mostrar</ion-button>
+<ion-footer>
+  <ion-toolbar>
+    <div class="navbar-center">
+      <ion-button routerLink="/home">
+        <ion-icon name="home-outline"></ion-icon>
+        Home
+      </ion-button>
+      <ion-button routerLink="/perfil">
+        <ion-icon name="person-outline"></ion-icon>
+        Perfil
+      </ion-button>
+      <ion-button routerLink="/favoritos">
+        <ion-icon name="heart-outline"></ion-icon>
+        Favoritos
+      </ion-button>
+      <ion-button routerLink="/ayuda">
+        <ion-icon name="help-circle-outline"></ion-icon>
+        Ayuda
+      </ion-button>
     </div>
-  </ion-list>
-</div>
+  </ion-toolbar>
+</ion-footer>

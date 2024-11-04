@@ -24,9 +24,8 @@ export class LoginPage {
       return;
     }
 
-    this.navCtrl.navigateForward('/home', {
-      queryParams: { usuario: this.usuario }
-    });
+    localStorage.setItem('usuario', this.usuario);
+    this.navCtrl.navigateForward('/home');
   }
 
   async showAlert(header: string, message: string) {
