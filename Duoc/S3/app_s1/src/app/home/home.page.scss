@@ -1,0 +1,75 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #14213d;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #14213d;
+  box-shadow: 
+        15px 15px 5px #d4890f,
+        10px 10px 5px #e69e0d,
+        5px 5px 5px #fca311;
+}
+
+.input-container {
+  background-color: #fca311;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.input-item {
+  background-color: transparent;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.input-item ion-input {
+  --border-radius: 10px;
+}
+
+.input-item ion-item ion-label {
+  margin-right: 10px; 
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-item {
+    max-width: 100%;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.slide-left {
+  animation: slideLeft 1s forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
