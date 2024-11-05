@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-// Definimos la interfaz para las películas en favoritos
 interface Pelicula {
   titulo: string;
   descripcion: string;
@@ -17,7 +16,6 @@ export class FavoritosPage {
   constructor() {}
 
   ionViewWillEnter() {
-    // Recupera la lista de favoritos desde localStorage
     this.favoritos = JSON.parse(localStorage.getItem('favoritos') || '[]');
   }
 }

@@ -1,15 +1,27 @@
-/* Contenedor principal para centrar el contenido verticalmente */
+ion-toolbar{
+  --background: #fca311;
+  border: #14213d 2px solid;
+  text-shadow: 5px 5px 15px black;
+}
+
+ion-content.perfil-container {
+  --background: #1f2a47; 
+}
+
+
 .perfil-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background: #14213d;
+  text-shadow: 5px 5px 15px black;
+
 }
 
-/* Estilo de la tarjeta de perfil */
 .perfil-card {
   border-radius: 20px;
+  place-self: center;
   width: 90%;
   max-width: 600px;
   background-color: #fca311;
@@ -25,12 +37,10 @@
       5px 5px 5px #fca311;
 }
 
-/* Estilo para el título */
 .perfil-title {
   font-size: 2.5rem;
 }
 
-/* Estilo de los items de entrada */
 .input-item {
   width: 100%;
   max-width: 400px;
@@ -38,7 +48,6 @@
   margin-bottom: 10px;
 }
 
-/* Ajustes de tamaño para dispositivos pequeños */
 @media (max-width: 768px) {
   .perfil-title {
       font-size: 2rem;

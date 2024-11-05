@@ -1,57 +1,52 @@
-ion-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 10;
-  }
-  
-  .navbar-center {
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;
-    width: 100%;
-  }
-  
-  /* Contenedor principal */
+ion-toolbar {
+  --background: #fca311;
+  border: #14213d 2px solid;
+  text-shadow: 5px 5px 15px black;
+}
+
+ion-content.favoritos-container {
+  --background: #1f2a47; 
+}
+
+
 .favoritos-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  background-color: #14213d;
+  min-height: 100vh;
+  background-color: #1f2a47;
   color: #ffffff;
+  text-shadow: 5px 5px 15px black;
+  padding: 0;
+  text-align: center;
 }
 
-/* Estilo para el título y los elementos de la lista */
 .favoritos-title {
+  font-size: 2.5rem;
   color: #fca311;
-  font-size: 2em;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .favoritos-list {
-  width: 100%;
+  width: 90%;
+  place-self: center;
   max-width: 600px;
-  background: #1f2a47;
+  background-color: #14213d;
+  border-radius: 20px;
   padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 15px 15px 5px #d4890f, 10px 10px 5px #e69e0d, 5px 5px 5px #fca311;
 }
 
 .favoritos-item {
-  background-color: #1f2a47;
+  background-color: #1f2a47; 
   color: #ffffff;
   border-radius: 10px;
   margin-bottom: 10px;
   padding: 10px;
-  box-shadow: 
-    0 4px 8px rgba(0, 0, 0, 0.2),
-    0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Ajuste de estilo de la navbar en el footer */
 ion-footer {
   position: fixed;
   bottom: 0;
@@ -66,16 +61,23 @@ ion-footer {
   width: 100%;
 }
 
-/* Estilo responsivo para dispositivos más pequeños */
+.navbar-center ion-button {
+  color: #14213d;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   .favoritos-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+
+  .favoritos-list {
+    padding: 10px;
   }
 }
 
 @media (max-width: 480px) {
-  .favoritos-item {
-    flex-direction: column;
-    padding: 8px;
+  .favoritos-title {
+    font-size: 1.8rem;
   }
 }
