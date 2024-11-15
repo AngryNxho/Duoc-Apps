@@ -1,0 +1,22 @@
+<h2 class="welcome-title">¡Bienvenido, {{ usuario }}!</h2>
+
+<ion-card class="contenedor" *ngIf="mostrarCard" [@slideInOut]>
+  <ion-card-header>
+    <ion-card-title>Agregar Nueva Película</ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="peliculas-container">
+    <ion-item class="input-container">
+      <ion-label position="floating">Título de la Película</ion-label>
+      <ion-input [(ngModel)]="nuevaPelicula.titulo" placeholder="Ingrese el título"></ion-input>
+    </ion-item>
+    <ion-item class="input-container">
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-textarea [(ngModel)]="nuevaPelicula.descripcion" placeholder="Ingrese una breve descripción"></ion-textarea>
+    </ion-item>
+    <div class="buttons">
+      <ion-button expand="block" (click)="agregarAFavoritos()" [@buttonClickAnimation]>
+        Agregar a Favoritos
+      </ion-button>
+    </div>
+  </ion-card-content>
+</ion-card>

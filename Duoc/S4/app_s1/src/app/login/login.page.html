@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true" [@fadeInOut]>
+  <div class="login-container">
+    <!-- Condicional para activar la animación slideInOut en el ion-card -->
+    <ion-card class="login-card" *ngIf="mostrarCard" [@slideInOut]>
+      <ion-card-header>
+        <ion-card-title class="login-title">Bienvenidos</ion-card-title>
+      </ion-card-header>
+      
+      <ion-card-content>
+        <ion-item class="input-item">
+          <ion-label position="floating" color="primary">Usuario</ion-label>
+          <ion-input [(ngModel)]="usuario" maxlength="8" pattern="[a-zA-Z0-9]*" placeholder="Ingrese usuario"></ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+          <ion-label position="floating" color="primary">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="password" maxlength="4" pattern="[0-9]*" placeholder="****"></ion-input>
+        </ion-item>
+
+        <!-- Animación de presionado en el botón de login -->
+        <ion-button expand="block" class="login-button" (click)="login()" [@buttonClickAnimation]>
+          Ingresar
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
