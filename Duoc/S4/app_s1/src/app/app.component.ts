@@ -8,10 +8,11 @@ import { DbTaskService } from './service/myservice.service';
 })
 export class AppComponent {
   constructor(private dbTaskService: DbTaskService) {
-    this.initializeDatabase();
+    this.initializeApp();
   }
 
-  async initializeDatabase() {
-    await this.dbTaskService.initializeDatabase();
+  async initializeApp() {
+    await this.dbTaskService.initializeStorage(); // Inicializa almacenamiento
+    await this.dbTaskService.initializeDatabase(); // Inicializa base de datos
   }
 }

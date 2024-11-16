@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { fadeInOut, buttonClickAnimation, slideInOut } from '../animations';
 
 @Component({
@@ -7,31 +7,17 @@ import { fadeInOut, buttonClickAnimation, slideInOut } from '../animations';
   styleUrls: ['./mis-datos.component.scss'],
   animations: [fadeInOut, buttonClickAnimation, slideInOut]
 })
-export class MisDatosComponent implements OnInit {
-  usuario: string = '';
-  nuevaPelicula = {
-    titulo: '',
-    descripcion: ''
+export class MisDatosComponent {
+  usuario: string = 'Usuario';
+  mostrarCard: boolean = true;
+
+  datosUsuario = {
+    nombre: '',
+    correo: '',
+    telefono: ''
   };
-  mostrarCard = false;
 
-  ngOnInit() {
-    this.usuario = localStorage.getItem('usuario') || 'Usuario';
-    this.mostrarCard = false;
-    setTimeout(() => {
-      this.mostrarCard = true;
-    }, 100);
-  }
-
-  agregarAFavoritos() {
-    if (this.nuevaPelicula.titulo.trim() && this.nuevaPelicula.descripcion.trim()) {
-      const favoritos = JSON.parse(localStorage.getItem('favoritos') || '[]');
-      favoritos.push({ ...this.nuevaPelicula });
-      localStorage.setItem('favoritos', JSON.stringify(favoritos));
-      this.nuevaPelicula = { titulo: '', descripcion: '' };
-      alert('Película agregada a favoritos');
-    } else {
-      alert('Por favor, ingrese título y descripción.');
-    }
+  guardarDatos() {
+    console.log('Datos guardados:', this.datosUsuario);
   }
 }

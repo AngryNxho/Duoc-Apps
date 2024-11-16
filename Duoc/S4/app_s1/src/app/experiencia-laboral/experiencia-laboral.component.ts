@@ -1,14 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { fadeInOut, buttonClickAnimation, slideInOut } from '../animations';
 
 @Component({
   selector: 'app-experiencia-laboral',
   templateUrl: './experiencia-laboral.component.html',
   styleUrls: ['./experiencia-laboral.component.scss'],
+  animations: [fadeInOut, buttonClickAnimation, slideInOut]
 })
-export class ExperienciaLaboralComponent  implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
-
+export class ExperienciaLaboralComponent {
+  constructor() {}
 }

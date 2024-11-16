@@ -1,0 +1,67 @@
+:host {
+    display: block;
+    padding: 16px;
+    background-color: #1f2a47;
+    color: #ffffff;
+  }
+  
+  .welcome-title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fca311;
+    margin-bottom: 20px;
+  }
+  
+  .contenedor {
+    background: #fca311;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .peliculas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input-container {
+    --inner-padding-top: 8px;
+    --inner-padding-bottom: 8px;
+    background-color: #1f2a47;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-container ion-label {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .input-container ion-input {
+    margin-top: 4px;
+    color: #fca311;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .buttons ion-button {
+    background-color: #fca311;
+    color: #14213d;
+    font-weight: bold;
+    border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .buttons ion-button:hover {
+    background-color: #e69e0d;
+  }
+  

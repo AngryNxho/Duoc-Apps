@@ -1,21 +1,25 @@
-<h2 class="welcome-title">¡Bienvenido, {{ usuario }}!</h2>
+<h2 class="welcome-title" [@fadeInOut]>¡Bienvenido, {{ usuario }}!</h2>
 
 <ion-card class="contenedor" *ngIf="mostrarCard" [@slideInOut]>
   <ion-card-header>
-    <ion-card-title>Agregar Nueva Película</ion-card-title>
+    <ion-card-title [@fadeInOut]>Mis Datos</ion-card-title>
   </ion-card-header>
-  <ion-card-content class="peliculas-container">
-    <ion-item class="input-container">
-      <ion-label position="floating">Título de la Película</ion-label>
-      <ion-input [(ngModel)]="nuevaPelicula.titulo" placeholder="Ingrese el título"></ion-input>
+  <ion-card-content class="peliculas-container" [@fadeInOut]>
+    <ion-item class="input-container" [@fadeInOut]>
+      <ion-label position="floating">Nombre Completo</ion-label>
+      <ion-input [(ngModel)]="datosUsuario.nombre" placeholder="Ingrese su nombre"></ion-input>
     </ion-item>
-    <ion-item class="input-container">
-      <ion-label position="floating">Descripción</ion-label>
-      <ion-textarea [(ngModel)]="nuevaPelicula.descripcion" placeholder="Ingrese una breve descripción"></ion-textarea>
+    <ion-item class="input-container" [@fadeInOut]>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input [(ngModel)]="datosUsuario.correo" type="email" placeholder="Ingrese su correo"></ion-input>
+    </ion-item>
+    <ion-item class="input-container" [@fadeInOut]>
+      <ion-label position="floating">Número de Teléfono</ion-label>
+      <ion-input [(ngModel)]="datosUsuario.telefono" type="tel" placeholder="Ingrese su número"></ion-input>
     </ion-item>
     <div class="buttons">
-      <ion-button expand="block" (click)="agregarAFavoritos()" [@buttonClickAnimation]>
-        Agregar a Favoritos
+      <ion-button expand="block" (click)="guardarDatos()" [@buttonClickAnimation]>
+        Guardar Datos
       </ion-button>
     </div>
   </ion-card-content>
